@@ -1,0 +1,28 @@
+import pandas as pd
+import matplotlib.pyplot
+%matplotlib inline
+exam_data ={
+    'name':['Anastasia','Diama','Katherine','james','Emily','Michoel','matthew','Laura','kevin','Jonas'],
+    'score':[12.5,9,16.5,6,9,20,14.5,7.5,8,19],
+    'Attempts':[1,3,2,3,2,3,1,1,2,1]
+}
+labels=['a','b','c','d','e','f','g','h','i','j']
+df=pd.DataFrame(exam_data,index=labels)
+df
+df.head()
+df.head(2)
+df.head(8)
+df.iloc[:3]
+df.iloc[:4]
+df['score']
+df['name']=='Emily'
+df[df['name']=='Emily']
+df[df['name']=='Emily']['score']
+df.loc['d','score']=11.5
+df
+df.loc['h','Attempts']=8
+df
+df[(df['score']>=15)&(df['score']<=20)]
+df['Attempts'].sum()
+df['score'].sum()
+df['score'].mean()
